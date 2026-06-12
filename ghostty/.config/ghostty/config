@@ -1,0 +1,12 @@
+command = zsh -l -i
+
+theme = Catppuccin Macchiato
+
+window-padding-x = 12
+window-padding-y = 10
+
+cursor-style = bar
+mouse-hide-while-typing = true
+
+font-family = CaskaydiaCove Nerd Font Mono
+font-size = 13
