@@ -27,7 +27,7 @@ unstow_packages() {
   for entry in "$@"; do
     local package="${entry%%:*}"  # package name (before the colon, or the full entry)
     local label="${entry#*:}"     # display label (after the colon, or same as package)
-    stow --dir="$stow_directory" --target="$target" --delete "$package"
+    stow --dir="$stow_directory" --target="$target" --delete --no-folding "$package"
     printf "    %s✗%s  %s%-14s%s  %s→  %s%s\n" \
       "$RED" "$RESET" \
       "$TEXT" "$label" "$RESET" \

@@ -37,7 +37,7 @@ stow_packages() {
       fi
     done < <(find "$stow_directory/$package" -type f -print0)
 
-    stow --dir="$stow_directory" --target="$target" --restow "$package"
+    stow --dir="$stow_directory" --target="$target" --restow --no-folding "$package"
     printf "    %s✓%s  %s%-14s%s  %s→  %s%s\n" \
       "$GREEN" "$RESET" \
       "$TEXT" "$label" "$RESET" \

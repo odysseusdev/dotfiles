@@ -1,6 +1,6 @@
 # dotfiles
 
-*dotfiles for every odyssey. one config, a thousand shores.*
+_dotfiles for every odyssey. one config, a thousand shores._
 
 personal configuration files managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
@@ -21,7 +21,7 @@ dotfiles/
 └── unlink.sh     # remove symlinks
 ```
 
-*^ not managed by stow*
+_^ not managed by stow_
 
 ## 🚀 installation
 
@@ -38,11 +38,13 @@ git clone https://github.com/odysseus/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-**2. install packages** *(optional)*
+**2. install packages** _(optional)_
 
-installs all packages for the current platform — homebrew bundle on macOS, pacman and yay on arch. skip this if you only want the configs.
+installs all packages for the current platform — homebrew bundle on macOS, pacman and yay on arch. skip this if you only want the configs. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
 
 > **heads up** — the package lists also include apps i use as part of my personal setup that don't have configs here (e.g. obsidian, zen browser). feel free to trim them to your needs.
+
+> **double heads up** — if you have vscode account sync enabled, it may re-apply your synced extensions and conflict with the list here. disable sync before running if you want a clean result.
 
 ```bash
 ./install.sh
