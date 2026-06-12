@@ -16,10 +16,9 @@ dotfiles/
 ├── vscode/           # vscode settings
 ├── zsh/              # zshrc, aliases, syntax highlighting
 ├── zsa/              # ZSA keyboard sync (not managed by stow)
+│   ├── <name>/       # generated output, one dir per layout
 │   ├── layouts       # oryx hash IDs, one per line
-│   ├── sync.sh       # fetch, convert, and render all layouts
-│   ├── hephaestus/   # generated output
-│   └── hermes/       # generated output
+│   └── sync.sh       # fetch, convert, and render all layouts
 ├── install.sh        # install packages
 ├── link.sh           # add symlinks
 └── unlink.sh         # remove symlinks
@@ -98,4 +97,4 @@ add an Oryx layout hash ID to `zsa/layouts`, one per line. the hash is the short
 
 ## 🤝 contributing
 
-guests are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
+fork it, use it, make it yours. see [CONTRIBUTING.md](CONTRIBUTING.md).
