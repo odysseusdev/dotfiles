@@ -1,0 +1,23 @@
+# taps
+
+# formulae
+brew "gh"              # github cli
+brew "nvm"             # node version manager
+brew "bun"             # js runtime & package manager
+brew "pipx"            # python tool installer
+brew "pnpm"            # js package manager
+brew "python@3.14"     # python runtime
+brew "ripgrep"         # fast grep
+brew "yarn"            # js package manager
+
+# fonts
+cask "font-caskaydia-cove-nerd-font" # monospace font with ligatures
+
+# apps
+cask "bruno"              # api client
+cask "claude-code"        # claude ai cli & desktop
+cask "ghostty"            # terminal emulator
+cask "obsidian"           # markdown knowledge base
+cask "superwhisper"       # openai whisper GUI
+cask "visual-studio-code" # code editor
+cask "zen"                # gecko-based browser
