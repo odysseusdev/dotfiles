@@ -59,14 +59,14 @@ printf "\n  sync vscode extensions after install? %s[y/N]%s " "$DIM" "$RESET"
 read -r install_extensions_choice
 
 if [[ "$install_extensions_choice" =~ ^[Yy]$ ]]; then
-  # Wipes everything not in the list — good for a clean slate, optional otherwise.
+  # Wipes everything not in the list, good for a clean slate, optional otherwise.
   printf "  clear existing extensions first? %s[y/N]%s " "$DIM" "$RESET"
   read -r clear_extensions_choice
 fi
 
 case "$(uname -s)" in
   Darwin)
-    require brew "homebrew is not installed — visit https://brew.sh"
+    require brew "homebrew is not installed, visit https://brew.sh"
 
     section "updating homebrew"
     printf "  %shanding off to homebrew...%s\n\n" "$DIM" "$RESET"
@@ -81,9 +81,9 @@ case "$(uname -s)" in
 
   Linux)
     require pacman "pacman is not installed"
-    require yay "yay is not installed — install it from the AUR before running this script"
+    require yay "yay is not installed, install it from the AUR before running this script"
 
-    # yay -Syu covers both pacman and AUR — no need for a separate pacman refresh.
+    # yay -Syu covers both pacman and AUR; no need for a separate pacman refresh.
     section "updating system"
     printf "  %shanding off to yay...%s\n\n" "$DIM" "$RESET"
     yay -Syu
@@ -112,15 +112,15 @@ if [[ ! "$install_extensions_choice" =~ ^[Yy]$ ]]; then
 else
   section "vscode extensions"
 
-  # Use the full path — PATH won't include a brand new VSCode install yet.
+  # Use the full path; PATH won't include a brand new VSCode install yet.
   vscode_binary="$(find_vscode_binary)"
 
   if [[ -z "$vscode_binary" ]]; then
-    # Probably a fresh install — open a new terminal to pick up the binary.
-    printf "  %s✗%s  vscode binary not found — open a new terminal and re-run to install extensions\n" "$RED" "$RESET"
+    # Probably a fresh install, open a new terminal to pick up the binary.
+    printf "  %s✗%s  vscode binary not found, open a new terminal and re-run to install extensions\n" "$RED" "$RESET"
   else
     if [[ "${clear_extensions_choice:-}" =~ ^[Yy]$ ]]; then
-      # Deletes ~/.vscode/extensions — VSCode recreates it on next launch.
+      # Deletes ~/.vscode/extensions; VSCode recreates it on next launch.
       rm -rf "$HOME/.vscode/extensions"
     fi
 

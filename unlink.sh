@@ -40,7 +40,7 @@ printf "\n  %s%sdotfiles%s  %s/ unlink%s\n" "$MAUVE" "$BOLD" "$RESET" "$DIM" "$R
 section "packages"
 unstow_packages "$DOTFILES" "$HOME" assets ghostty git zsh vscode
 
-# macOS stores some app configs outside ~/.config — handle them separately.
+# macOS stores some app configs outside ~/.config; handle them separately.
 if [[ "$(uname -s)" == "Darwin" ]]; then
   section "macos extras"
   VSCODE_TARGET="$HOME/Library/Application Support/Code/User"

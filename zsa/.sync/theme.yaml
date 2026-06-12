@@ -1,0 +1,52 @@
+draw_config:
+    dark_mode: true
+    key_h: 56
+    key_w: 60
+    key_rx: 6
+    key_ry: 6
+    inner_pad_w: 2
+    inner_pad_h: 2
+    outer_pad_w: 28
+    outer_pad_h: 48
+    n_columns: 1
+
+    # Glyph sizes: larger than defaults so icons fill the key nicely
+    glyph_tap_size: 20
+    glyph_hold_size: 16
+    glyph_shifted_size: 16
+
+    svg_extra_style: |
+        /* Catppuccin Macchiato */
+        svg.keymap { background-color: #24273a; }
+
+        rect.key { fill: #363a4f; stroke: #494d64; stroke-width: 1; }
+        rect.key.held, rect.combo.held { fill: #494d64; }
+
+        /* base text */
+        text { fill: #cad3f5; font-family: 'CaskaydiaCove Nerd Font Mono', 'Fira Code', ui-monospace, monospace; }
+
+        /* primary tap label: slightly larger than keymap-drawer default */
+        text.tap { fill: #cad3f5; font-size: 16px; }
+        use.tap { fill: #cad3f5; }
+
+        /* layer header labels */
+        text.layer-label { fill: #8aadf4; font-weight: 600; font-size: 18px; }
+
+        /* hold modifier labels (text) and glyphs (use): lavender, lower corner */
+        text.bl, text.br { fill: #b7bdf8; font-size: 12px; font-weight: 500; }
+        text.bl { transform: translateX(1px) translateY(-3px); }
+        text.br { transform: translateX(-1px) translateY(-3px); }
+        use.bl, use.br { fill: #b7bdf8; }
+
+        /* shifted output: upper corner */
+        text.tl, text.tr { fill: #939ab7; font-size: 12px; transform: translateX(2px) translateY(3px); }
+        text.tl { transform: translateX(2px) translateY(3px); }
+        text.tr { transform: translateX(-2px) translateY(3px); }
+
+        /* transparent keys: darker background, muted triangle */
+        rect.key.trans { fill: #1e2030; stroke: #363a4f; }
+        text.trans { fill: #494d64; font-size: 14px; }
+
+        /* held key: the activator you're holding to reach this layer */
+        rect.key.held, rect.combo.held { fill: #c6a0f6; fill-opacity: 0.16; stroke: #c6a0f6; }
+        text.held { display: none; }

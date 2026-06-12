@@ -1,3 +1,6 @@
 # macOS
 .DS_Store
 
+# zsa
+zsa/.sync/.venv/
+zsa/.sync/__pycache__/
