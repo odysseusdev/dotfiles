@@ -1,18 +1,18 @@
 {
 	"[csharp]": {
-		"editor.defaultFormatter": "ms-dotnettools.csharp"
+		"editor.defaultFormatter": "ms-dotnettools.csharp",
 	},
 	"[powershell]": {
-		"editor.defaultFormatter": "ms-vscode.powershell"
+		"editor.defaultFormatter": "ms-vscode.powershell",
 	},
 	"[rust]": {
-		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+		"editor.defaultFormatter": "rust-lang.rust-analyzer",
 	},
 	"[svelte]": {
-		"editor.defaultFormatter": "svelte.svelte-vscode"
+		"editor.defaultFormatter": "svelte.svelte-vscode",
 	},
 	"[xml]": {
-		"editor.defaultFormatter": "redhat.vscode-xml"
+		"editor.defaultFormatter": "redhat.vscode-xml",
 	},
 
 	"chat.tips.enabled": false,
@@ -53,7 +53,7 @@
 		"*.jsx": "${capture}.js, ${capture}.test.js, ${capture}.stories.jsx, ${capture}.css, ${capture}.module.css",
 		"*.razor": "${capture}.razor.cs",
 		"*.tsx": "${capture}.ts, ${capture}.test.tsx, ${capture}.css, ${capture}.module.css",
-		"appsettings.json": "appsettings.*.json"
+		"appsettings.json": "appsettings.*.json",
 	},
 	"explorer.incrementalNaming": "smart",
 	"explorer.sortOrder": "filesFirst",
@@ -72,13 +72,14 @@
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"json.schemaDownload.trustedDomains": {
 		"https://developer.microsoft.com/json-schemas/": true,
+		"https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json": true,
 		"https://json-schema.org/": true,
 		"https://json.schemastore.org/": true,
 		"https://raw.githubusercontent.com/devcontainers/spec/": true,
 		"https://raw.githubusercontent.com/microsoft/vscode/": true,
 		"https://schemastore.azurewebsites.net/": true,
 		"https://ui.shadcn.com": true,
-		"https://www.schemastore.org/": true
+		"https://www.schemastore.org/": true,
 	},
 	"python.analysis.typeCheckingMode": "standard",
 	"tailwindCSS.classFunctions": ["cva", "cx"],
@@ -101,18 +102,15 @@
 		"Command Prompt": {
 			"args": [],
 			"icon": "terminal-cmd",
-			"path": [
-				"${env:windir}\\Sysnative\\cmd.exe",
-				"${env:windir}\\System32\\cmd.exe"
-			]
+			"path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
 		},
 		"Git Bash": {
-			"source": "Git Bash"
+			"source": "Git Bash",
 		},
 		"PowerShell": {
 			"icon": "terminal-powershell",
-			"source": "PowerShell"
-		}
+			"source": "PowerShell",
+		},
 	},
 
 	"window.closeWhenEmpty": true,
@@ -123,18 +121,18 @@
 	"workbench.activityBar.location": "top",
 	"workbench.colorCustomizations": {
 		"tree.inactiveIndentGuidesStroke": "#484843",
-		"tree.indentGuidesStroke": "#64645f"
+		"tree.indentGuidesStroke": "#64645f",
 	},
 	"workbench.colorTheme": "Catppuccin Macchiato",
 	"workbench.editor.closeOnFileDelete": true,
 	"workbench.editor.labelFormat": "short",
 	"workbench.editorAssociations": {
 		"*.copilotmd": "vscode.markdown.preview.editor",
-		"*.svg": "imagePreview.previewEditor"
+		"*.svg": "imagePreview.previewEditor",
 	},
 	"workbench.iconTheme": "catppuccin-macchiato",
 	"workbench.panel.showLabels": false,
 	"workbench.startupEditor": "none",
 	"workbench.tree.indent": 20,
-	"workbench.tree.renderIndentGuides": "always"
+	"workbench.tree.renderIndentGuides": "always",
 }

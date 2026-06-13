@@ -4,6 +4,7 @@
 brew "bat"                     # better cat
 brew "bun"                     # js runtime & package manager
 brew "eza"                     # better ls
+brew "fastfetch"               # os and spec display
 brew "fd"                      # better find
 brew "fzf"                     # fuzzy search
 brew "gh"                      # github cli

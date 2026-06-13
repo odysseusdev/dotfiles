@@ -48,7 +48,7 @@ stow_packages() {
 printf "\n  %s%sdotfiles%s  %s/ link%s\n" "$MAUVE" "$BOLD" "$RESET" "$DIM" "$RESET"
 
 section "packages"
-stow_packages "$DOTFILES" "$HOME" assets ghostty git zsh vscode
+stow_packages "$DOTFILES" "$HOME" assets fastfetch ghostty git zsh vscode
 
 # macOS stores some app configs outside ~/.config; handle them separately.
 if [[ "$(uname -s)" == "Darwin" ]]; then

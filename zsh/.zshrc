@@ -1,3 +1,6 @@
+# Fastfetch configuration
+fastfetch
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -9,7 +12,16 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # # Theme configuration
-ZSH_THEME="powerlevel10k/powerlevel10k"
+for p10k_path in \
+  /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme \
+  /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme \
+  /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+do
+  if [[ -f "$p10k_path" ]]; then
+    source "$p10k_path"
+    break
+  fi
+done
 
 [[ ! -f ${ZDOTDIR:-$HOME}/.p10k.zsh ]] || source ${ZDOTDIR:-$HOME}/.p10k.zsh
 
@@ -86,9 +98,6 @@ _fzf_comprun() {
 
 # Bat configuration
 export BAT_THEME="Catppuccin Macchiato"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Alias configuration
 [[ -f "$HOME/.aliases.zsh" ]] && source "$HOME/.aliases.zsh"
