@@ -1,23 +1,34 @@
 # taps
 
 # formulae
-brew "gh"              # github cli
-brew "nvm"             # node version manager
-brew "bun"             # js runtime & package manager
-brew "pipx"            # python tool installer
-brew "pnpm"            # js package manager
-brew "python@3.14"     # python runtime
-brew "ripgrep"         # fast grep
-brew "yarn"            # js package manager
+brew "bat"                     # better cat
+brew "bun"                     # js runtime & package manager
+brew "eza"                     # better ls
+brew "fd"                      # better find
+brew "fzf"                     # fuzzy search
+brew "gh"                      # github cli
+brew "neovim"                  # code editor
+brew "nvm"                     # node version manager
+brew "pipx"                    # python tool installer
+brew "pnpm"                    # js package manager
+brew "powerlevel10k"           # zsh theme
+brew "python@3.14"             # python runtime
+brew "ripgrep"                 # fast grep
+brew "thefuck"                 # correct previous command
+brew "tmux"                    # terminal multiplexer
+brew "yarn"                    # js package manager
+brew "zoxide"                  # better cd
+brew "zsh-autosuggestions"     # zsh autosuggestions
+brew "zsh-syntax-highlighting" # zsh syntax highlighting
 
 # fonts
 cask "font-caskaydia-cove-nerd-font" # monospace font with ligatures
 
 # apps
-cask "bruno"              # api client
-cask "claude-code"        # claude ai cli & desktop
-cask "ghostty"            # terminal emulator
-cask "obsidian"           # markdown knowledge base
-cask "superwhisper"       # openai whisper GUI
-cask "visual-studio-code" # code editor
-cask "zen"                # gecko-based browser
+cask "bruno"                   # api client
+cask "claude-code"             # claude ai cli & desktop
+cask "ghostty"                 # terminal emulator
+cask "obsidian"                # markdown knowledge base
+cask "superwhisper"            # openai whisper gui
+cask "visual-studio-code"      # code editor
+cask "zen"                     # gecko-based browser

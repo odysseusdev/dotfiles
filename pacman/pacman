@@ -1,11 +1,21 @@
 # formulae
+bat
 bun
+eza
+fd
+fzf
 github-cli
+neovim
 python
 python-pipx
 pnpm
 ripgrep
+thefuck
+tmux
 yarn
+zoxide
+zsh-autosuggestions
+zsh-syntax-highlighting
 
 # fonts
 ttf-cascadia-code-nerd
