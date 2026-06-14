@@ -99,6 +99,23 @@ case "$(uname -s)" in
     ;;
 esac
 
+# Skip oh-my-zsh if zsh is not the default shell or curl is unavailable; warn
+# and continue rather than aborting so the rest of the script still runs.
+if [[ "$(basename "$SHELL")" != "zsh" ]]; then
+  printf "\n  %s·%s  shell is not zsh, skipping oh-my-zsh install\n" "$DIM" "$RESET"
+elif ! command -v curl &>/dev/null; then
+  printf "\n  %s·%s  curl is not installed, skipping oh-my-zsh install\n" "$DIM" "$RESET"
+elif [[ -d "$HOME/.oh-my-zsh" ]]; then
+  printf "\n  %s·%s  oh-my-zsh already installed, skipping\n" "$DIM" "$RESET"
+else
+  section "installing oh-my-zsh"
+  printf "  %shanding off to oh-my-zsh installer...%s\n\n" "$DIM" "$RESET"
+  # RUNZSH=no prevents the installer launching zsh mid-script.
+  # CHSH=no skips the default shell prompt, which would require a password.
+  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  printf "\n  %s✓%s  oh-my-zsh installed\n" "$GREEN" "$RESET"
+fi
+
 if [[ ! "$install_extensions_choice" =~ ^[Yy]$ ]]; then
   printf "\n  %sskipping vscode extensions%s\n" "$DIM" "$RESET"
 else

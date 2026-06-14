@@ -12,6 +12,7 @@ python                       # python runtime
 python-pipx                  # python tool installer
 pnpm                         # js package manager
 ripgrep                      # fast grep
+stow                         # symlink farmer
 thefuck                      # correct previous command
 tmux                         # terminal multiplexer
 yarn                         # js package manager

@@ -15,6 +15,7 @@ brew "pnpm"                    # js package manager
 brew "powerlevel10k"           # zsh theme
 brew "python@3.14"             # python runtime
 brew "ripgrep"                 # fast grep
+brew "stow"	                   # symlink farmer
 brew "thefuck"                 # correct previous command
 brew "tmux"                    # terminal multiplexer
 brew "yarn"                    # js package manager

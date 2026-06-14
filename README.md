@@ -41,7 +41,9 @@ cd ~/dotfiles
 
 **2. install packages** _(optional)_
 
-installs all packages for the current platform: homebrew bundle on macOS, yay on arch. yay handles both official pacman packages and AUR packages in a single pass, so the list in `aur/packages` covers everything. skip this if you only want the configs. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
+installs all packages for the current platform: homebrew bundle on macOS, yay on arch. yay handles both official pacman packages and AUR packages in a single pass, so the list in `aur/packages` covers everything. if zsh is the default shell, [oh-my-zsh](https://ohmyz.sh) is installed automatically. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
+
+skip this if you only want the configs.
 
 > **heads up**: the package lists also include apps i use as part of my personal setup that don't have configs here (e.g. obsidian, zen browser). feel free to trim them to your needs.
 
