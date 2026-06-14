@@ -8,10 +8,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Oh My Zsh configuration
-export ZSH="$HOME/.oh-my-zsh"
-
-# # Theme configuration
+# Theme configuration
 for p10k_path in \
   /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme \
   /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme \
@@ -25,6 +22,7 @@ done
 
 [[ ! -f ${ZDOTDIR:-$HOME}/.p10k.zsh ]] || source ${ZDOTDIR:-$HOME}/.p10k.zsh
 
+# Syntax highlighting styles (must be set before sourcing zsh-syntax-highlighting)
 [[ -f "$HOME/.syntax.zsh" ]] && source "$HOME/.syntax.zsh"
 
 # History configuration
@@ -36,28 +34,31 @@ setopt hist_expire_dups_first
 setopt hist_ignore_dups
 setopt hist_verify
 
-# Environment configuratoin
+# Environment configuration
 export EDITOR="code"
 export LANG=en_AU.UTF-8
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
-# Plugin configuration
-plugins=(
-  eza
-  git
-  fzf
-  thefuck
-  zoxide
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-)
+# Zoxide (replaces cd)
+eval "$(zoxide init zsh)"
 
-source $ZSH/oh-my-zsh.sh
+# Thefuck
+eval "$(thefuck --alias)"
 
-# FZF configuration
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# FZF key bindings and completion
+for fzf_shell in \
+  /usr/share/fzf \
+  /opt/homebrew/opt/fzf/shell \
+  /usr/local/opt/fzf/shell
+do
+  if [[ -d "$fzf_shell" ]]; then
+    [[ -f "$fzf_shell/key-bindings.zsh" ]] && source "$fzf_shell/key-bindings.zsh"
+    [[ -f "$fzf_shell/completion.zsh" ]] && source "$fzf_shell/completion.zsh"
+    break
+  fi
+done
 
 export FZF_DEFAULT_OPTS=" \
 --color=bg+:#363A4F,bg:#24273A,spinner:#F4DBD6,hl:#ED8796 \
@@ -79,7 +80,7 @@ _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
 
-## preview configuration for FZF
+## Preview configuration for FZF
 preview_prompt="if [ -d {} ]; then eza --color=always --tree {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
 
 export FZF_CTRL_T_OPTS="--preview '$preview_prompt'"
@@ -101,3 +102,27 @@ export BAT_THEME="Catppuccin Macchiato"
 
 # Alias configuration
 [[ -f "$HOME/.aliases.zsh" ]] && source "$HOME/.aliases.zsh"
+
+# Autosuggestions
+for zsh_autosuggestions_path in \
+  /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh \
+  /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh \
+  /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+do
+  if [[ -f "$zsh_autosuggestions_path" ]]; then
+    source "$zsh_autosuggestions_path"
+    break
+  fi
+done
+
+# Syntax highlighting — must be sourced last
+for zsh_syntax_highlighting_path in \
+  /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \
+  /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \
+  /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+do
+  if [[ -f "$zsh_syntax_highlighting_path" ]]; then
+    source "$zsh_syntax_highlighting_path"
+    break
+  fi
+done
