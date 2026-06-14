@@ -1,0 +1,32 @@
+# formulae
+bat                          # better cat
+bun                          # js runtime & package manager
+eza                          # better ls
+fastfetch                    # os and spec display
+fd                           # better find
+fzf                          # fuzzy search
+github-cli                   # github cli
+neovim                       # code editor
+nvm                          # node version manager
+python                       # python runtime
+python-pipx                  # python tool installer
+pnpm                         # js package manager
+ripgrep                      # fast grep
+thefuck                      # correct previous command
+tmux                         # terminal multiplexer
+yarn                         # js package manager
+zoxide                       # better cd
+zsh-autosuggestions          # zsh autosuggestions
+zsh-syntax-highlighting      # zsh syntax highlighting
+zsh-theme-powerlevel10k-git  # zsh theme
+
+# fonts
+ttf-cascadia-code-nerd       # monospace font with ligatures
+
+# apps
+bruno-bin                    # api client
+claude-code                  # claude ai cli & desktop
+ghostty                      # terminal emulator
+obsidian                     # markdown knowledge base
+visual-studio-code-bin       # code editor
+zen-browser-bin              # gecko-based browser

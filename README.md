@@ -9,10 +9,10 @@ personal configuration files managed with [GNU Stow](https://www.gnu.org/softwar
 ```
 dotfiles/
 ├── assets/           # wallpaper
+├── aur/              # package list (arch)
 ├── brew/             # homebrew bundle (macOS)
 ├── ghostty/          # ghostty terminal
 ├── git/              # git config and global ignore
-├── pacman/           # pacman & AUR package lists (arch)
 ├── vscode/           # vscode settings
 ├── zsh/              # zshrc, aliases, syntax highlighting
 ├── zsa/              # ZSA keyboard sync (not managed by stow)
@@ -32,7 +32,7 @@ clone the repo, then make sure the following are available:
 
 - [GNU Stow](https://www.gnu.org/software/stow/): `brew install stow` / `pacman -S stow`
 - macOS: [homebrew](https://brew.sh)
-- arch: `pacman` and `yay`
+- arch: [yay](https://github.com/Jguer/yay) (covers both official and AUR packages)
 
 ```bash
 git clone https://github.com/odysseus/dotfiles.git ~/dotfiles
@@ -41,7 +41,7 @@ cd ~/dotfiles
 
 **2. install packages** _(optional)_
 
-installs all packages for the current platform: homebrew bundle on macOS, pacman and yay on arch. skip this if you only want the configs. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
+installs all packages for the current platform: homebrew bundle on macOS, yay on arch. yay handles both official pacman packages and AUR packages in a single pass, so the list in `aur/packages` covers everything. skip this if you only want the configs. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
 
 > **heads up**: the package lists also include apps i use as part of my personal setup that don't have configs here (e.g. obsidian, zen browser). feel free to trim them to your needs.
 

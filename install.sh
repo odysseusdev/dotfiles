@@ -80,26 +80,18 @@ case "$(uname -s)" in
     ;;
 
   Linux)
-    require pacman "pacman is not installed"
     require yay "yay is not installed, install it from the AUR before running this script"
 
-    # yay -Syu covers both pacman and AUR; no need for a separate pacman refresh.
     section "updating system"
     printf "  %shanding off to yay...%s\n\n" "$DIM" "$RESET"
     yay -Syu
     printf "\n  %s✓%s  system updated\n" "$GREEN" "$RESET"
 
-    section "installing pacman packages"
-    printf "  %shanding off to pacman...%s\n\n" "$DIM" "$RESET"
-    mapfile -t pacman_packages < <(read_packages "$DOTFILES/pacman/pacman")
-    sudo pacman -S --needed "${pacman_packages[@]}"
-    printf "\n  %s✓%s  pacman packages installed\n" "$GREEN" "$RESET"
-
-    section "installing aur packages"
+    section "installing packages"
     printf "  %shanding off to yay...%s\n\n" "$DIM" "$RESET"
-    mapfile -t aur_packages < <(read_packages "$DOTFILES/pacman/aur")
+    mapfile -t aur_packages < <(read_packages "$DOTFILES/aur/packages")
     yay -S --needed "${aur_packages[@]}"
-    printf "\n  %s✓%s  aur packages installed\n" "$GREEN" "$RESET"
+    printf "\n  %s✓%s  packages installed\n" "$GREEN" "$RESET"
     ;;
 
   *)

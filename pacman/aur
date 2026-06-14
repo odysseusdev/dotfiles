@@ -1,9 +1,0 @@
-# formulae
-nvm                          # node version manager
-zsh-theme-powerlevel10k-git  # zsh theme
-
-# apps
-bruno-bin                    # api client
-claude-code                  # claude ai cli & desktop
-visual-studio-code-bin       # code editor
-zen-browser-bin              # gecko-based browser
