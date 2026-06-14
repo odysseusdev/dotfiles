@@ -34,7 +34,7 @@ require() {
 # Read package names from a file, skipping comments and blank lines.
 read_packages() {
   local file_path="$1"
-  grep -v '^\s*#' "$file_path" | grep -v '^\s*$'
+  grep -v '^\s*#' "$file_path" | grep -v '^\s*$' | awk '{print $1}'
 }
 
 # Locate the VSCode CLI binary using known install paths for the current platform.
