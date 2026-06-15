@@ -3,25 +3,7 @@
 # Install packages for the current platform. Run this before link.sh.
 set -euo pipefail
 
-# Resolve the dotfiles directory regardless of where the script is called from.
-DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-# Catppuccin Macchiato
-MAUVE=$'\033[38;2;198;160;246m'
-GREEN=$'\033[38;2;166;218;149m'
-RED=$'\033[38;2;237;135;150m'
-DIM=$'\033[38;2;128;135;162m'
-BOLD=$'\033[1m'
-RESET=$'\033[0m'
-
-section() {
-  printf "\n  %s%s%s%s\n\n" "$MAUVE" "$BOLD" "$1" "$RESET"
-}
-
-abort() {
-  printf "\n  %s%s✗  %s%s\n\n" "$RED" "$BOLD" "$1" "$RESET"
-  exit 1
-}
+source "$(dirname "${BASH_SOURCE[0]}")/lib.sh"
 
 # Terminate with a clear message if a required command is not available.
 require() {
@@ -31,18 +13,13 @@ require() {
   fi
 }
 
-# Read package names from a file, skipping comments and blank lines.
-read_packages() {
-  local file_path="$1"
-  grep -v '^\s*#' "$file_path" | grep -v '^\s*$' | awk '{print $1}'
-}
-
 # Locate the VSCode CLI binary using known install paths for the current platform.
 find_vscode_binary() {
-  local -a candidate_paths
+  local -a candidate_paths=()
   case "$(uname -s)" in
     Darwin) candidate_paths=("/opt/homebrew/bin/code" "/usr/local/bin/code") ;;
     Linux)  candidate_paths=("/usr/bin/code") ;;
+    *) ;;
   esac
   for candidate_path in "${candidate_paths[@]}"; do
     if [[ -x "$candidate_path" ]]; then
@@ -52,7 +29,7 @@ find_vscode_binary() {
   done
 }
 
-printf "\n  %s%sdotfiles%s  %s/ install%s\n" "$MAUVE" "$BOLD" "$RESET" "$DIM" "$RESET"
+banner "install"
 
 # Ask upfront so the install runs without interruption.
 printf "\n  sync vscode extensions after install? %s[y/N]%s " "$DIM" "$RESET"
@@ -99,7 +76,6 @@ case "$(uname -s)" in
     ;;
 esac
 
-
 if [[ ! "$install_extensions_choice" =~ ^[Yy]$ ]]; then
   printf "\n  %sskipping vscode extensions%s\n" "$DIM" "$RESET"
 else
@@ -109,7 +85,6 @@ else
   vscode_binary="$(find_vscode_binary)"
 
   if [[ -z "$vscode_binary" ]]; then
-    # Probably a fresh install, open a new terminal to pick up the binary.
     printf "  %s✗%s  vscode binary not found, open a new terminal and re-run to install extensions\n" "$RED" "$RESET"
   else
     if [[ "${clear_extensions_choice:-}" =~ ^[Yy]$ ]]; then

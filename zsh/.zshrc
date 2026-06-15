@@ -41,6 +41,31 @@ export LANG=en_AU.UTF-8
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+
+for nvm_sh in \
+  /usr/share/nvm/nvm.sh \
+  /opt/homebrew/opt/nvm/nvm.sh \
+  /usr/local/opt/nvm/nvm.sh
+do
+  if [[ -f "$nvm_sh" ]]; then
+    source "$nvm_sh"
+    break
+  fi
+done
+
+for nvm_completion in \
+  /usr/share/nvm/bash_completion \
+  /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm \
+  /usr/local/opt/nvm/etc/bash_completion.d/nvm
+do
+  if [[ -f "$nvm_completion" ]]; then
+    source "$nvm_completion"
+    break
+  fi
+done
+
 # Zoxide (replaces cd)
 eval "$(zoxide init zsh)"
 

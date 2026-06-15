@@ -11,9 +11,11 @@ dotfiles/
 ├── assets/           # wallpaper
 ├── aur/              # package list (arch)
 ├── brew/             # homebrew bundle (macOS)
+├── fastfetch/        # fastfetch config
 ├── ghostty/          # ghostty terminal
 ├── git/              # git config and global ignore
 ├── vscode/           # vscode settings
+├── zen/              # zen browser theming
 ├── zsh/              # zshrc, aliases, syntax highlighting
 ├── zsa/              # ZSA keyboard sync (not managed by stow)
 │   ├── <name>/       # generated output, one dir per layout
@@ -26,46 +28,34 @@ dotfiles/
 
 ## 🚀 installation
 
-**1. prerequisites**
-
-clone the repo, then make sure the following are available:
+clone the repo and ensure the prerequisites are available:
 
 - [GNU Stow](https://www.gnu.org/software/stow/): `brew install stow` / `pacman -S stow`
 - macOS: [homebrew](https://brew.sh)
-- arch: [yay](https://github.com/Jguer/yay) (covers both official and AUR packages)
+- arch: [yay](https://github.com/Jguer/yay)
 
 ```bash
 git clone https://github.com/odysseus/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-**2. install packages** _(optional)_
+**1. install packages** _(optional)_
 
-installs all packages for the current platform: homebrew bundle on macOS, yay on arch. yay handles both official pacman packages and AUR packages in a single pass, so the list in `aur/packages` covers everything. the script will also prompt to sync vscode extensions after install, with an option to clear existing ones first.
-
-skip this if you only want the configs.
-
-> **heads up**: the package lists also include apps i use as part of my personal setup that don't have configs here (e.g. obsidian, zen browser). feel free to trim them to your needs.
-
-> **double heads up**: if you have vscode account sync enabled, it may re-apply your synced extensions and conflict with the list here. disable sync before running if you want a clean result.
+installs packages for the current platform — homebrew bundle on macOS, yay on arch. also prompts to sync vscode extensions.
 
 ```bash
 ./install.sh
 ```
 
-**3. link configs**
+**2. link configs**
 
-stows all packages into `~` and handles platform differences automatically. for example, on macOS, vscode settings are additionally linked into `~/Library/Application Support/Code/User/`.
-
-> **heads up**: any existing config files for these applications will be overwritten. back up anything you want to keep before running.
+> **heads up**: existing configs will be overwritten. back up anything you want to keep first.
 
 ```bash
 ./link.sh
 ```
 
 **unlinking**
-
-to remove only the symlinks created by `link.sh`:
 
 ```bash
 ./unlink.sh
