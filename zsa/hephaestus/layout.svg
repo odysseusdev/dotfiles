@@ -412,17 +412,16 @@ text.held { display: none; }
 </g>
 <g transform="translate(28, 218)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:shift" xlink:href="#material:shift" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:shift"/>
+<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_control_key"/>
 </g>
 <g transform="translate(84, 218)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">Z</text>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_control_key"/>
+<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(140, 207)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">X</text>
-<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(196, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -453,17 +452,16 @@ text.held { display: none; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">.</text>
 <text x="24" y="-24" class="key tr">&gt;</text>
-<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(784, 218)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">/</text>
 <text x="24" y="-24" class="key tr">?</text>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_control_key"/>
+<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(840, 218)" class="key keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:shift" xlink:href="#material:shift" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:shift"/>
+<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_control_key"/>
 </g>
 <g transform="translate(309, 290) rotate(30.0)" class="key keypos-48">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -478,7 +476,7 @@ text.held { display: none; }
 <g transform="translate(519, 333) rotate(-30.0)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-37" width="52" height="74" class="key"/>
 <use href="#material:delete" xlink:href="#material:delete" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:delete"/>
-<text x="24" y="35" class="key br">Hyper</text>
+<use href="#material:shift" xlink:href="#material:shift" x="8" y="19" height="16" width="16.0" class="key br glyph material:shift"/>
 </g>
 <g transform="translate(559, 290) rotate(-30.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -653,13 +651,12 @@ text.held { display: none; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">6</text>
 <text x="-24" y="-24" class="key tl">^</text>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_control_key"/>
+<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(140, 207)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">7</text>
 <text x="-24" y="-24" class="key tl">&amp;</text>
-<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-24" y="8" height="16" width="16.0" class="key bl glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(196, 196)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -691,12 +688,11 @@ text.held { display: none; }
 <g transform="translate(728, 207)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">{</text>
-<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(784, 218)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="0" class="key tap">}</text>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_control_key"/>
+<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="8" y="8" height="16" width="16.0" class="key br glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(840, 218)" class="key trans keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -868,11 +864,10 @@ text.held { display: none; }
 </g>
 <g transform="translate(84, 218)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_control_key"/>
-</g>
-<g transform="translate(140, 207)" class="key keypos-38">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_option_key"/>
+</g>
+<g transform="translate(140, 207)" class="key trans keypos-38">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 </g>
 <g transform="translate(196, 196)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -895,13 +890,12 @@ text.held { display: none; }
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#material:skip_next" xlink:href="#material:skip_next" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:skip_next"/>
 </g>
-<g transform="translate(728, 207)" class="key keypos-45">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_option_key"/>
+<g transform="translate(728, 207)" class="key trans keypos-45">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 </g>
 <g transform="translate(784, 218)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#material:keyboard_control_key" xlink:href="#material:keyboard_control_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_control_key"/>
+<use href="#material:keyboard_option_key" xlink:href="#material:keyboard_option_key" x="-10" y="-10" height="20" width="20.0" class="key tap glyph material:keyboard_option_key"/>
 </g>
 <g transform="translate(840, 218)" class="key trans keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

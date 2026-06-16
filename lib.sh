@@ -39,7 +39,7 @@ find_zen_profile() {
   local base_dir
   case "$(uname -s)" in
     Darwin) base_dir="$HOME/Library/Application Support/zen" ;;
-    Linux)  base_dir="$HOME/.zen" ;;
+    Linux)  base_dir="$HOME/.config/zen" ;;
     *) return 1 ;;
   esac
 
@@ -50,15 +50,17 @@ find_zen_profile() {
   fi
 
   local profile_path
-  profile_path=$(awk '
+  profile_path=$(awk -v base="$base_dir" '
+    function emit() { print (is_relative == "0" ? path : base "/" path); found = 1 }
     /^\[Profile/ {
-      if (is_default && path != "") { print path; exit }
-      is_default = 0; path = ""
+      if (is_default && path != "") { emit(); exit }
+      is_default = 0; path = ""; is_relative = 1
     }
-    /^Default=1$/ { is_default = 1 }
-    /^Path=/      { path = substr($0, 6) }
-    END           { if (is_default && path != "") print path }
+    /^Default=1$/  { is_default = 1 }
+    /^Path=/       { path = substr($0, 6) }
+    /^IsRelative=/ { is_relative = substr($0, 12) }
+    END            { if (!found && is_default && path != "") emit() }
   ' "$ini")
 
-  [[ -n "$profile_path" ]] && echo "$base_dir/$profile_path"
+  [[ -n "$profile_path" ]] && echo "$profile_path"
 }

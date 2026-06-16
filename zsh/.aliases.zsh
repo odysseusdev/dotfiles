@@ -16,5 +16,8 @@ alias ls="eza --color=always --git --icons=always --long --no-permissions --no-t
 # Thefuck
 alias fk="fuck"
 
+# Trash-cli
+alias trash="trash-put"
+
 # Zoxide
 alias cd="z"

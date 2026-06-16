@@ -40,7 +40,7 @@ stow_packages() {
 banner "link"
 
 section "packages"
-stow_packages "$DOTFILES" "$HOME" assets fastfetch ghostty git zsh vscode
+stow_packages "$DOTFILES" "$HOME" fastfetch ghostty git hypr vscode wireplumber zsh
 
 # macOS stores some app configs outside ~/.config; handle them separately.
 if [[ "$(uname -s)" == "Darwin" ]]; then

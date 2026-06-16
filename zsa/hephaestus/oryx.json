@@ -2,7 +2,7 @@
   "hashId": "nv4mJ",
   "title": "hephaestus",
   "revision": {
-    "hashId": "orAEM4",
+    "hashId": "Oaw3rJ",
     "model": "v1",
     "layers": [
       {
@@ -363,7 +363,7 @@
           },
           {
             "tap": {
-              "code": "KC_LEFT_SHIFT",
+              "code": "KC_LEFT_CTRL",
               "color": null,
               "layer": null,
               "macro": null,
@@ -392,7 +392,7 @@
               "description": null
             },
             "hold": {
-              "code": "KC_LEFT_CTRL",
+              "code": "KC_LEFT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -419,15 +419,7 @@
               "modifiers": null,
               "description": null
             },
-            "hold": {
-              "code": "KC_LEFT_ALT",
-              "color": null,
-              "layer": null,
-              "macro": null,
-              "modifier": null,
-              "modifiers": null,
-              "description": null
-            },
+            "hold": null,
             "icon": null,
             "emoji": null,
             "tapHold": null,
@@ -975,15 +967,7 @@
               "modifiers": null,
               "description": null
             },
-            "hold": {
-              "code": "KC_RIGHT_ALT",
-              "color": null,
-              "layer": null,
-              "macro": null,
-              "modifier": null,
-              "modifiers": null,
-              "description": null
-            },
+            "hold": null,
             "icon": null,
             "emoji": null,
             "tapHold": null,
@@ -1004,7 +988,7 @@
               "description": null
             },
             "hold": {
-              "code": "KC_RIGHT_CTRL",
+              "code": "KC_RIGHT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -1023,7 +1007,7 @@
           },
           {
             "tap": {
-              "code": "KC_RIGHT_SHIFT",
+              "code": "KC_RIGHT_CTRL",
               "color": null,
               "layer": null,
               "macro": null,
@@ -1052,7 +1036,7 @@
               "description": null
             },
             "hold": {
-              "code": "ALL_T",
+              "code": "KC_RIGHT_SHIFT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -1478,7 +1462,7 @@
               "description": null
             },
             "hold": {
-              "code": "KC_LEFT_CTRL",
+              "code": "KC_LEFT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -1505,15 +1489,7 @@
               "modifiers": null,
               "description": null
             },
-            "hold": {
-              "code": "KC_LEFT_ALT",
-              "color": null,
-              "layer": null,
-              "macro": null,
-              "modifier": null,
-              "modifiers": null,
-              "description": null
-            },
+            "hold": null,
             "icon": null,
             "emoji": null,
             "tapHold": null,
@@ -2037,15 +2013,7 @@
               "modifiers": null,
               "description": null
             },
-            "hold": {
-              "code": "KC_RIGHT_ALT",
-              "color": null,
-              "layer": null,
-              "macro": null,
-              "modifier": null,
-              "modifiers": null,
-              "description": null
-            },
+            "hold": null,
             "icon": null,
             "emoji": null,
             "tapHold": null,
@@ -2066,7 +2034,7 @@
               "description": null
             },
             "hold": {
-              "code": "KC_RIGHT_CTRL",
+              "code": "KC_RIGHT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -2475,7 +2443,7 @@
           },
           {
             "tap": {
-              "code": "KC_LEFT_CTRL",
+              "code": "KC_LEFT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
@@ -2495,7 +2463,7 @@
           },
           {
             "tap": {
-              "code": "KC_LEFT_ALT",
+              "code": "KC_NO",
               "color": null,
               "layer": null,
               "macro": null,
@@ -2508,7 +2476,7 @@
             "emoji": null,
             "tapHold": null,
             "doubleTap": null,
-            "glowColor": "#8BD5CA",
+            "glowColor": null,
             "customLabel": null,
             "tappingTerm": null,
             "lockGlowColor": null
@@ -3027,7 +2995,7 @@
           },
           {
             "tap": {
-              "code": "KC_RIGHT_ALT",
+              "code": "KC_NO",
               "color": null,
               "layer": null,
               "macro": null,
@@ -3040,14 +3008,14 @@
             "emoji": null,
             "tapHold": null,
             "doubleTap": null,
-            "glowColor": "#8BD5CA",
+            "glowColor": null,
             "customLabel": null,
             "tappingTerm": null,
             "lockGlowColor": null
           },
           {
             "tap": {
-              "code": "KC_RIGHT_CTRL",
+              "code": "KC_RIGHT_ALT",
               "color": null,
               "layer": null,
               "macro": null,
