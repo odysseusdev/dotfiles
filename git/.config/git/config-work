@@ -1,0 +1,22 @@
+[user]
+	signingkey =
+	name = Jimmy McCorkell
+	email = ITTS-JM@fwc.gov.au
+[gpg]
+	format =
+[gpg "ssh"]
+	allowedSignersFile =
+[commit]
+	gpgsign = false
+[pull]
+	rebase = true
+[core]
+	excludesfile = ~/.config/git/ignore
+	autocrlf = input
+[init]
+	defaultBranch = main
+[credential]
+  helper = manager
+	credentialStore = secretservice
+[credential "https://dev.azure.com"]
+	useHttpPath = true

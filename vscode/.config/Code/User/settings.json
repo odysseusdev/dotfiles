@@ -9,7 +9,7 @@
 	"editor.bracketPairColorization.independentColorPoolPerBracketType": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.foldingImportsByDefault": true,
-	"editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Consolas, 'Courier New', monospace",
+	"editor.fontFamily": "'CaskaydiaCove Nerd Font Mono', Consolas, 'Courier New', monospace, 'Noto Color Emoji'",
 	"editor.fontLigatures": true,
 	"editor.formatOnSave": true,
 	"editor.formatOnType": true,

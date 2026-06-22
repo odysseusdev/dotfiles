@@ -23,7 +23,7 @@ unstow_packages() {
 banner "unlink"
 
 section "packages"
-unstow_packages "$DOTFILES" "$HOME" fastfetch ghostty git hypr nvim tmux vscode wireplumber zsh
+unstow_packages "$DOTFILES" "$HOME" fastfetch ghostty git hypr hyprvoice mako nvim tmux vscode waybar wireplumber zsh
 
 # macOS stores some app configs outside ~/.config; handle them separately.
 if [[ "$(uname -s)" == "Darwin" ]]; then
