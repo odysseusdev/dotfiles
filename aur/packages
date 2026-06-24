@@ -6,6 +6,8 @@ fastfetch                    # os and spec display
 fd                           # better find
 fzf                          # fuzzy search
 github-cli                   # github cli
+jq                           # json processor
+lazygit											 # git terminal interface
 neovim                       # code editor
 nvm                          # node version manager
 python                       # python runtime
@@ -15,6 +17,7 @@ ripgrep                      # fast grep
 stow                         # symlink farmer
 thefuck                      # correct previous command
 tmux                         # terminal multiplexer
+tree-sitter-cli							 # syntax parser
 yarn                         # js package manager
 zoxide                       # better cd
 zsh-autosuggestions          # zsh autosuggestions

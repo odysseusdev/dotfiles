@@ -8,6 +8,8 @@ brew "fastfetch"               # os and spec display
 brew "fd"                      # better find
 brew "fzf"                     # fuzzy search
 brew "gh"                      # github cli
+brew "jq"                      # json processor
+brew "lazygit"								 # git terminal interface
 brew "neovim"                  # code editor
 brew "nvm"                     # node version manager
 brew "pipx"                    # python tool installer
@@ -18,6 +20,7 @@ brew "ripgrep"                 # fast grep
 brew "stow"	                   # symlink farmer
 brew "thefuck"                 # correct previous command
 brew "tmux"                    # terminal multiplexer
+brew "tree-sitter-cli"				 # syntax parser
 brew "yarn"                    # js package manager
 brew "zoxide"                  # better cd
 brew "zsh-autosuggestions"     # zsh autosuggestions

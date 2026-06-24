@@ -1,6 +1,3 @@
-# Fastfetch configuration
-fastfetch
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -71,6 +68,11 @@ eval "$(zoxide init zsh)"
 
 # Thefuck
 eval "$(thefuck --alias)"
+
+# refresh tmux status line immediately on directory change
+autoload -Uz add-zsh-hook
+_tmux_refresh_pwd() { [[ -n "$TMUX" ]] && tmux refresh-client -S; }
+add-zsh-hook chpwd _tmux_refresh_pwd
 
 # FZF key bindings and completion
 for fzf_shell in \
