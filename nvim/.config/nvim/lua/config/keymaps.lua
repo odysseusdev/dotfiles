@@ -27,12 +27,9 @@ vim.keymap.set({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, si
 vim.keymap.set({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 
 -- window splits (creating them; navigation is tmux-navigation's job)
-vim.keymap.set("n", "<leader>-", "<C-w>s", { desc = "split window below" })
-vim.keymap.set("n", "<leader>|", "<C-w>v", { desc = "split window right" })
+vim.keymap.set("n", "<leader>wh", "<C-w>s", { desc = "split window below" })
+vim.keymap.set("n", "<leader>wv", "<C-w>v", { desc = "split window right" })
 vim.keymap.set("n", "<leader>wd", "<C-w>c", { desc = "delete window" })
-
--- buffer delete (S-h/S-l for navigation lives in bufferline.lua)
-vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "delete buffer" })
 
 -- quit
 vim.keymap.set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "quit all" })

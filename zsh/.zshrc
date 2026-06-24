@@ -34,6 +34,7 @@ setopt hist_verify
 # Environment configuration
 export EDITOR="code"
 export LANG=en_AU.UTF-8
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
 
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward

@@ -1,3 +1,3 @@
 return {
-  { "b0o/schemastore.nvim", lazy = true },
+	{ "b0o/schemastore.nvim", lazy = true },
 }

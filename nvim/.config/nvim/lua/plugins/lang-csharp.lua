@@ -1,7 +1,7 @@
 return {
-  {
-    "seblyng/roslyn.nvim",
-    ft = "cs",
-    opts = {},
-  },
+	{
+		"seblyng/roslyn.nvim",
+		ft = "cs",
+		opts = {},
+	},
 }
