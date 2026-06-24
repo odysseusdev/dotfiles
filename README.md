@@ -8,19 +8,22 @@ personal configuration files managed with [GNU Stow](https://www.gnu.org/softwar
 
 ```
 dotfiles/
-├── assets/           # wallpaper
 ├── aur/              # package list (arch)
 ├── brew/             # homebrew bundle (macOS)
 ├── fastfetch/        # fastfetch config
 ├── ghostty/          # ghostty terminal
 ├── git/              # git config and global ignore
-├── vscode/           # vscode settings
+├── hypr/             # hyprland window manager
+├── nvim/             # neovim config
+├── tmux/             # tmux config
+├── vscode/           # vscode settings and extension list
+├── wireplumber/      # wireplumber audio session manager
 ├── zen/              # zen browser theming
-├── zsh/              # zshrc, aliases, syntax highlighting
 ├── zsa/              # ZSA keyboard sync (not managed by stow)
 │   ├── <name>/       # generated output, one dir per layout
 │   ├── layouts       # oryx hash IDs, one per line
 │   └── sync.sh       # fetch, convert, and render all layouts
+├── zsh/              # zshrc, aliases, syntax highlighting
 ├── install.sh        # install packages
 ├── link.sh           # add symlinks
 └── unlink.sh         # remove symlinks
